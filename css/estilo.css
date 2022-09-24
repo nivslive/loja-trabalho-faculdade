@@ -1,0 +1,645 @@
+/*
+
+TEMPLATE FEITO PELO NIVS!!!!!!!!!!!!
+Para comprovar que não foi template editado, muitas das classes gerais foi aplicado um prefixo 'iesb'
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+ul, h1, h2, h3, h4, p, figure {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0;
+}
+
+h2 { font-size: 1.5rem; }
+
+a { 
+    transition: all 0.3s ease; 
+    text-decoration: none;
+}
+
+a:hover { text-decoration: none; }
+button:focus { outline: none; }
+p { 
+  color: #666;
+  line-height: 1.7; 
+  margin-bottom: 35px;
+}
+
+h1, h2, h3, h4, h5, h6 { color: #333; }
+
+.container-fluid {
+    max-width: 1210px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iesb-mb-0 { margin-bottom: 0; }
+.iesb-mb-1 { margin-bottom: 20px; }
+.iesb-mb-2 { margin-bottom: 40px; }
+.iesb-mb-3 { margin-bottom: 60px; }
+.iesb-mb-4 { margin-bottom: 30px; }
+.iesb-bg-color-1 { background-color: #d36165; }
+.iesb-bg-color-2 { background-color: #ffc9c9; }
+.iesb-bg-color-3 { background-color: #b131ad; }
+.iesb-bg-color-4 { background-color: #d899ff; }
+.iesb-bg-color-5 { background-color: #99CC99; }
+.iesb-bg-color-6 { background-color: #F2F2F2; }
+.iesb-bg-color-7 { background-color: #DDD; }
+.iesb-bg-color-8 { background-color: #EDEEEF; } /* Nav background */
+.iesb-bg-color-white { background-color: white; }
+.iesb-text-color-1 { color: #666; }
+.iesb-text-color-2 { color: #333; }
+.iesb-text-white { color: #fff; }
+.text-center { text-align: center; }
+
+.iesb-site-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 210px;
+}
+
+.iesb-site-name-container {
+    width: 29.752%;
+    min-width: 300px;
+    margin-right: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform:uppercase;
+}
+
+.iesb-nav-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 68.595%;
+  height: 100%;
+  padding: 20px;
+}
+
+.iesb-nav-item {
+  list-style: none;
+  display: inline-block;
+  width: 145px;
+  height: 145px;
+  margin-right: 15px;
+  background-color: white;
+}
+
+.iesb-nav-item:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 899px) {
+  .iesb-site-header {
+    height: auto;
+    flex-direction: column;
+  }
+  .iesb-site-name-container,
+  .iesb-nav-container {
+    width: 100%;
+  }
+
+  .iesb-site-name-container {
+    margin-right: 0;
+    padding:50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .iesb-nav-item { margin: 10px; }
+  .iesb-nav-item:last-child { margin-right: 10px; }
+
+  .iesb-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+}
+
+.iesb-nav-link {
+  color: #666;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 25%;
+  font-size: 1.2rem;
+}
+
+.iesb-nav-item.current .iesb-nav-link,
+.iesb-nav-link:hover {
+  color: white;
+  background-color: #CC9999;
+}
+
+@media (max-width: 1033px) {
+  .iesb-nav-item {
+    width: 120px;
+    height: 120px;
+  }
+
+  .iesb-nav-link { padding-left: 20px; }
+}
+
+.iesb-img-responsive {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.iesb-section-1-l {
+  width: 57.85%;
+  margin-right: 1.65%;
+}
+
+.iesb-section-1-r {
+  padding: 50px 40px;
+  width: 40.5%;
+}
+
+.iesb-row { display: flex; }
+
+.iesb-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #CC9999;
+  color: white;
+}
+
+.iesb-btn:hover {
+  color: white;
+  background-color: #875959;
+}
+
+.iesb-social-row { padding: 70px; }
+.iesb-icon { width: 33.3334%; }
+
+.iesb-icon-inner {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.iesb-icon-inner > a > * { color: white; }
+.iesb-icon-inner h3 { line-height: 1.7; }
+
+.iesb-section-2-l {
+  width: 40.5%;
+  margin-right: 1.65%;
+}
+
+.iesb-section-2-r { width: 57.85%; }
+.iesb-box-pad { padding: 40px 50px; }
+
+.iesb-em-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 60px 45px;
+}
+
+.iesb-em-box p {
+  font-style: italic;
+  line-height: 2;
+  max-width: 370px;  
+}
+
+.iesb-btn-2 { background-color: #666768; }
+
+.iesb-btn-2:hover {
+  color: white;
+  background-color: #989A9B;
+}
+
+.iesb-btn-3 { background-color: #99CC99; }
+.iesb-btn-3:hover { background-color: #547d54; }
+
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/* GALERIA */
+.iesb-gallery-header { padding: 40px 40px 30px; }
+.text-right { text-align: right; }
+
+.iesb-gallery-filter {
+  text-align: center;
+  list-style: none;
+}
+
+.iesb-gallery-filter > li { display: inline-block; }
+
+.iesb-gallery-filter > li > a {
+  display: block;
+  margin: 5px;
+  color: #333;
+}
+
+.iesb-gallery-filter > li > a.active,
+.iesb-gallery-filter > li > a:hover {
+  color: #fff;
+}
+
+.iesb-gallery-section { padding-bottom: 40px; }
+
+.iesb-gallery-outer {
+  margin-left: -10px;
+  margin-right: -10px;
+  background-color: white;
+}
+
+.iesb-gallery {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 0 auto 0;  
+  max-width: 1225px;  
+}
+
+.iesb-gallery-item { 
+  padding: 10px; 
+  width: 20%;
+}
+
+@media (max-width: 1200px) {
+  .iesb-gallery { max-width: 1200px; }
+  .iesb-gallery-item {
+    width: 25%;    
+  }
+}
+
+/* 
+  ONDE FOI PEGO A IDEIA DO HOVER EFFECT DA GALERA?
+  https://tympanus.net/codrops/2014/06/19/ideas-for-subtle-hover-effects/
+*/
+
+/* ESTILOS GERAIS */
+.iesb-gallery-item figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-bottom: 0;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iesb-gallery-item figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.iesb-gallery-item figure figcaption {
+  padding: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.iesb-gallery-item figure figcaption::before,
+.iesb-gallery-item figure figcaption::after {
+  pointer-events: none;
+}
+
+.iesb-gallery-item figure figcaption,
+.iesb-gallery-item figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.iesb-gallery-item figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  font-size: 0;
+  opacity: 0;
+}
+
+.iesb-gallery-item figure h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  color: white;
+}
+
+.iesb-gallery-item figure h2 span {
+  font-weight: 800;
+}
+
+.iesb-gallery-item figure h2,
+.iesb-gallery-item figure p {
+  margin: 0;
+}
+
+.iesb-gallery-item figure p {
+  letter-spacing: 1px;
+  font-size: 68.5%;
+}
+
+/*---------------*/
+/***** Bubba *****/
+/*---------------*/
+
+figure.effect-bubba { background: #9e5406; }
+
+figure.effect-bubba img {
+  opacity: 1;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+figure.effect-bubba:hover img { opacity: 0.4; }
+
+figure.effect-bubba figcaption::before,
+figure.effect-bubba figcaption::after {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  content: "";
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-bubba figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+figure.effect-bubba figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+figure.effect-bubba h2 {
+  font-size: 1.5rem;
+  padding-top: 20%;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+}
+
+figure.effect-bubba p {
+  color: white;
+  width: 100%;
+  padding: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+figure.effect-bubba:hover figcaption::before,
+figure.effect-bubba:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+figure.effect-bubba:hover h2,
+figure.effect-bubba:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 900px) {
+  .iesb-gallery { max-width: 900px; }
+  .iesb-gallery-item { width: 33.3334%; }
+}
+
+@media (max-width: 620px) {
+  .iesb-gallery { max-width: 600px; }
+  .iesb-gallery-item { width: 50%; }
+}
+
+@media (max-width: 400px) {
+  .iesb-gallery { max-width: 280px; }
+  .iesb-gallery-item { width: 100%; }
+}
+
+/* Contact */
+.iesb-contact-title {
+  padding-top: 55px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+#contact { padding-bottom: 40px; }
+
+.iesb-contact-main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+}
+
+.map-outer {
+  position:relative;
+  text-align:right;
+  min-height:400px; 
+  width:35%; 
+  height: 100%;
+  padding-right: 10px;
+}
+
+.gmap-canvas {
+  overflow:hidden;
+  background:none!important;
+  min-height:400px;
+  width:100%;
+}
+
+.contact-form-outer { width: 37%; }
+.contact-info-outer { width: 28%; }
+
+.contact-form-outer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contact-info-outer { padding-left: 10px; }
+
+.contact-info {
+  padding: 45px 40px;  
+  height: 100%;
+}
+
+#contact-form {
+  height: 100%;
+  padding: 35px 65px;
+}
+
+@media (max-width: 440px) {
+  #contact-form { padding: 35px; }
+}
+
+.form-group { margin-bottom: 25px; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: none;
+  border-bottom: 1px solid #999A9B;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.ml-auto {
+  margin-left: auto;
+  display: block;
+}
+
+a { color: #666; }
+a:hover { color: #CC9999; }
+button:hover { cursor: pointer; }
+
+.iesb-social-link {
+  width: 40px;
+  height: 40px;
+  background-color: #DDD;
+  display: inline-block;
+  margin: 8px;
+}
+
+.iesb-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 992px) {
+  .iesb-section-1-l,
+  .iesb-section-1-r,
+  .iesb-section-2-l,
+  .iesb-section-2-r {
+    width: 100%;
+  }
+
+  .iesb-section-1-l {
+    margin-bottom: 20px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .iesb-section-2-l { margin-bottom: 20px; }
+  .iesb-section-2-r { text-align: center; }
+
+  .iesb-section-1-r,
+  .iesb-section-2-l {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .iesb-about-row,
+  .iesb-services-row {
+    flex-direction: column;
+  }
+
+  .iesb-social-row { padding: 70px 30px; }
+}
+
+@media (max-width: 800px) {
+  .iesb-social-row { flex-direction: column; }
+  .iesb-icon { width: 100%; }
+  .iesb-icon-inner { padding: 30px; }
+}
+
+@media (min-width: 1240px) {
+  .iesb-section-1-r { max-height: 700px; }
+}
+
+@media (max-width: 1145px) {
+  .map-outer,
+  .contact-form-outer,
+  .contact-info-outer {
+    width: 100%;  
+    padding: 0;  
+  }
+
+  .map-outer,
+  .contact-form-outer { margin-bottom: 20px; }
+
+  .iesb-contact-main { flex-direction: column; }
+}
+
+/* https://codepen.io/matthewcain/pen/ZepbeR */
+#button {
+  padding-top: 1px;
+  display: inline-block;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active { background-color: #555; }
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
